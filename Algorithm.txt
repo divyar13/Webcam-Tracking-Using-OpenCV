@@ -1,0 +1,9 @@
+Webcam tracking of finger using colour detection (red)
+
+Algorithm
+1. Set up a connection to the webcam of the laptop
+2. Convert each frame of the webcam feed from BGR format to HSV
+3. Threshold the image - The image is converted to a binary image wherein the red object is white and the rest of the image is black.
+4. Calculate the moment of the white polygon in the thresholded image (using openCV function) in order to obtain the approximate coordinates.
+5. Use the openCV line function to draw a line from the previous position to the current position.
+6. These coordinates can also be given to a mouse cursor (after scaling to the screen resolution)
